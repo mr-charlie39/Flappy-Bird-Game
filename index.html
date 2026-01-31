@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Flappy Bird Adventure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-dove" aria-hidden="true"></i> 3D Flappy Bird Adventure</h1>
+            <p>Fly through magical pipes, collect stars, and unlock amazing levels!</p>
+        </div>
+        
+        <div class="game-wrapper">
+            <canvas id="gameCanvas"></canvas>
+            
+            <div class="ui-overlay">
+                <div class="ui-top">
+                    <div class="score-display">
+                        <i class="fas fa-star" style="color: gold;" aria-hidden="true"></i>
+                        <span id="score">0</span>
+                    </div>
+                    <div class="level-display">
+                        <i class="fas fa-layer-group" style="color: #00ffcc;" aria-hidden="true"></i>
+                        <span id="level">Level 1</span>
+                    </div>
+                </div>
+                
+                <div class="ui-bottom">
+                    <div id="startScreen" class="start-screen">
+                        <h2>Flappy Bird Adventure</h2>
+                        <p>Navigate through magical pipes, collect glowing stars, and complete levels to unlock amazing rewards!</p>
+                        
+                        <div class="level-info">
+                            <div>
+                                <h3>Current Level</h3>
+                                <p>1</p>
+                            </div>
+                            <div>
+                                <h3>Pipes to Pass</h3>
+                                <p>5</p>
+                            </div>
+                            <div>
+                                <h3>Difficulty</h3>
+                                <p>Easy</p>
+                            </div>
+                        </div>
+                        
+                        <button id="startBtn" class="btn">
+                            <i class="fas fa-play" aria-hidden="true"></i> Start Adventure
+                        </button>
+                        <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">
+                            Press SPACE, CLICK, or TAP to fly
+                        </p>
+                    </div>
+                    
+                    <div id="gameOverScreen" class="game-over-screen hidden">
+                        <h2>Amazing Flight!</h2>
+                        <p>You had a great run! Ready to fly even higher?</p>
+                        
+                        <div class="level-info">
+                            <div>
+                                <h3>Score</h3>
+                                <p id="finalScore">0</p>
+                            </div>
+                            <div>
+                                <h3>Level Reached</h3>
+                                <p id="finalLevel">1</p>
+                            </div>
+                            <div>
+                                <h3>Best Score</h3>
+                                <p id="bestScore">0</p>
+                            </div>
+                        </div>
+                        
+                        <button id="restartBtn" class="btn">
+                            <i class="fas fa-redo" aria-hidden="true"></i> Fly Again
+                        </button>
+                        <p style="margin-top: 15px; font-size: 0.9rem; color: #00ffcc;">
+                            Tip: Collect stars for bonus points!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="levelUp" class="level-up hidden">
+                <div>LEVEL UP!</div>
+                <div style="font-size: 1.5rem; margin-top: 15px;">Amazing flying skills!</div>
+            </div>
+            
+            <div id="comboDisplay" class="combo-display hidden">
+                <i class="fas fa-bolt" aria-hidden="true"></i> COMBO x<span id="comboCount">1</span>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>Game Features & How to Play</h3>
+            <div class="instruction-cards">
+                <div class="card">
+                    <i class="fas fa-gamepad" aria-hidden="true"></i>
+                    <h4>Easy Controls</h4>
+                    <p>Just click, tap, or press SPACE to make your bird fly. Simple and fun!</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-gem" aria-hidden="true"></i>
+                    <h4>Collect Stars</h4>
+                    <p>Grab shiny stars for bonus points and special effects during flight</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                    <h4>Progressive Levels</h4>
+                    <p>6 exciting levels with gradually increasing challenge. Perfect for all players!</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-trophy" aria-hidden="true"></i>
+                    <h4>Achievements</h4>
+                    <p>Beat your high score, unlock levels, and become the ultimate Flappy Bird champion!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
